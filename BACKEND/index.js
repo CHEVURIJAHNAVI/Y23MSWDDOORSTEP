@@ -26,7 +26,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
-
+const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
 
 const userRoutes = require('./routes/UserRoutes');
@@ -252,6 +252,47 @@ app.post("/api/sendmail", async (req, res) => {
   } catch (error) {
     console.error("Error sending email:", error.message);
     res.status(500).json({ error: " Error submitting feedback, please try again." });
+  }
+});
+app.get('/api/users/me', authenticateJWT, async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id);
+
+    if (!user) {
+      return res.status(404).json({ message: "Profile not found" });
+    }
+
+    res.json({
+      name: user.name,
+      email: user.email
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching profile", error: err.message });
+  }
+});
+
+app.put('/api/users/me', authenticateJWT, async (req, res) => {
+  try {
+    const { name } = req.body;
+    const user = await User.findById(req.user.id);
+
+    if (!user) {
+      return res.status(404).json({ message: "Profile not found" });
+    }
+
+    if (name) user.name = name;
+    await user.save();
+
+    // Send back updated user info (name and email)
+    res.json({
+      message: "Profile updated successfully",
+      user: {
+        name: user.name,
+        email: user.email,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Error updating profile", error: err.message });
   }
 });
 
