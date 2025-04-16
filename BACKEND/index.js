@@ -29,7 +29,7 @@ const mongoose = require('mongoose');
 const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
 
-const userRoutes = require('./routes/UserRoutes');
+const userRoutes = require('./routes/userRoutes');
 
 	const cors = require('cors');
 
