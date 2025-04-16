@@ -1,0 +1,81 @@
+/* Container styling */
+.container {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  /* Title styling */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #02075D;
+    margin-bottom: 1rem;
+  }
+  
+  /* Grid and card styling */
+  .order-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .order-card {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Card content styling */
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-content h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #02075D;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-content p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Status Styling */
+  .status {
+    font-weight: bold;
+  }
+  
+  .status.delivered {
+    color: green;
+  }
+  
+  .status.shipped {
+    color: orange;
+  }
+  
+  .status.processing {
+    color: blue;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 600px) {
+    .order-grid {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+  

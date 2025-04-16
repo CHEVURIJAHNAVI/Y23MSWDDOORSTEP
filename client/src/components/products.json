@@ -1,0 +1,18 @@
+[
+    {
+      "id": "1",
+      "name": "Product 1",
+      "description": "Description 1",
+      "quantity": "10",
+      "price": "100",
+      "mfgDate": "2023-01-01"
+    },
+    {
+      "id": "2",
+      "name": "Product 2",
+      "description": "Description 2",
+      "quantity": "20",
+      "price": "200",
+      "mfgDate": "2023-02-01"
+    }
+  ]

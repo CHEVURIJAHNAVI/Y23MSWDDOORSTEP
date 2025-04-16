@@ -1,0 +1,128 @@
+.products-container {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.products-table th, 
+.products-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.products-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.products-table tr:hover {
+  background-color: #f1f1f1;
+}
+.products-container {
+  margin: 30px auto;
+  max-width: 90%;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #02075D;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.products-table th, 
+.products-table td {
+  padding: 15px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.products-table th {
+  background-color:#02075D;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 2px solid #02075D;
+}
+
+.products-table td {
+  border-bottom: 1px solid #ddd;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.products-table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.products-table td:first-child {
+  font-weight: bold;
+}
+
+.products-table tr td {
+  text-align: center;
+}
+
+.products-table th, 
+.products-table td {
+  border-right: 1px solid #ddd;
+}
+
+.products-table th:last-child, 
+.products-table td:last-child {
+  border-right: none;
+}
+
+.products-table th:first-child, 
+.products-table td:first-child {
+  border-left: none;
+}
+
+.products-table {
+  transition: all 0.3s ease;
+}
+
+.products-table tr:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.products-table th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.products-table-wrapper {
+  overflow-x: auto;
+  border-radius: 10px;
+}

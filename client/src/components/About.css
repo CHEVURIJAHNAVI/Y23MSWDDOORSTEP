@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Container Styles */
+.about-container {
+  margin-top:3rem;
+  min-height: 100vh;           /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* Vertical centering */
+  align-items: center;         /* Horizontal centering */
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/* Avatar Styles */
+.about-avatar {
+  background-color: #3f51b5;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(63, 81, 181, 0.4);
+}
+
+/* Typography Styles */
+.about-title {
+  margin-top:5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Card Styles */
+.about-card {
+  width: 70%;
+  margin-top:10rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  margin: 1rem auto;
+  height:70vh;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-card-content {
+  padding: 1.5rem;
+}
+
+.about-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #3f51b5;
+}
+
+.about-card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Box Styles */
+.about-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1rem;
+  }
+
+  .about-card {
+    width: 90%; /* Adjust for smaller screens */
+  }
+
+  .about-title {
+    font-size: 1.75rem;
+  }
+
+  .about-card-title {
+    font-size: 1.1rem;
+  }
+
+  .about-card-text {
+    font-size: 0.85rem;
+  }
+}
