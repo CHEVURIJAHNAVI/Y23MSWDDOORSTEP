@@ -30,9 +30,7 @@ const app = express();
 const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
 app.use(express.static(path.join(__dirname, '../client/build')));
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+
 const userRoutes = require('./routes/userRoutes');
 
 	const cors = require('cors');
@@ -298,5 +296,8 @@ app.put('/api/users/me', authenticateJWT, async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: "Error updating profile", error: err.message });
   }
+});
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
