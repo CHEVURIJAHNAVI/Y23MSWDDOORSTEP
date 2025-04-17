@@ -14,7 +14,7 @@ const JWTRegister = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/register', {
+      const res = await axios.post('/api/users/register', {
         name,
         email,
         password,
