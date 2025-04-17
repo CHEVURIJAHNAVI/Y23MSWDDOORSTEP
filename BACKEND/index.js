@@ -30,6 +30,10 @@ const app = express();
 const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
 app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(cors({
+  origin: 'https://y23mswddoorstep.onrender.com',
+   // only if using cookies
+}));
 
 const userRoutes = require('./routes/userRoutes');
 
