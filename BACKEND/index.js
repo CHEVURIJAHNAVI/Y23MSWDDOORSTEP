@@ -32,8 +32,10 @@ const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
 app.use(cors({
   origin: 'https://y23mswddoorstep.onrender.com',
+	methods: ['GET', 'POST', 'PUT', 'DELETE'],
    // only if using cookies
 }));
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/build')));
