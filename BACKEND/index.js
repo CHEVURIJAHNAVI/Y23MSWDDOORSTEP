@@ -38,7 +38,7 @@ app.use(cors({
 
 const userRoutes = require('./routes/userRoutes');
 
-	const cors = require('cors');
+	
 
 	const connectDB = require('./config/db');
 
