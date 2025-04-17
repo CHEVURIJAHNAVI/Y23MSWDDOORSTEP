@@ -27,6 +27,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const app = express();
+const cors = require('cors');
 const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
 app.use(express.static(path.join(__dirname, '../client/build')));
