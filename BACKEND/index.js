@@ -30,11 +30,14 @@ const app = express();
 const cors = require('cors');
 const authenticateJWT = require('./middleware/authenticateJWT')
 const dotenv = require('dotenv');
-app.use(express.static(path.join(__dirname, '../client/build')));
 app.use(cors({
   origin: 'https://y23mswddoorstep.onrender.com',
    // only if using cookies
 }));
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '../client/build')));
+
 
 const userRoutes = require('./routes/userRoutes');
 
@@ -47,8 +50,7 @@ const userRoutes = require('./routes/userRoutes');
 
 
 
-	app.use(cors());
-	app.use(express.json());
+	
 
 	app.use('/api/users', userRoutes);
 
