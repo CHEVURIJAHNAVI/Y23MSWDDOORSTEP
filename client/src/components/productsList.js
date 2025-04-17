@@ -25,7 +25,7 @@ function Product() {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/getProducts');
+      const res = await axios.get('/getProducts');
       setProducts(res.data);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -78,7 +78,7 @@ function Product() {
 
     if (isEdit) {
       try {
-        const res = await axios.put(`http://localhost:5000/editProduct/${selectedProductId}`, {
+        const res = await axios.put(`/editProduct/${selectedProductId}`, {
           name,
           date,
           price,
@@ -92,7 +92,7 @@ function Product() {
       }
     } else {
       try {
-        const res = await axios.post('http://localhost:5000/addProduct', {
+        const res = await axios.post('/addProduct', {
           name,
           date,
           price,
@@ -109,7 +109,7 @@ function Product() {
 
   const deleteProduct = async (id) => {
     try {
-      const res = await axios.delete(`http://localhost:5000/deleteProduct/${id}`);
+      const res = await axios.delete(/deleteProduct/${id}`);
       fetchProducts();
       alert(res.data.message);
     } catch (error) {
